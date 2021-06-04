@@ -1,0 +1,122 @@
+    <html lang="en">
+      <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+        <title>CollegeFeesManagementSystem</title>
+        <style>
+            .form-textbox {
+                    height: 40px !important;
+                    width: 260px !important;
+                    font-size: 14px !important;
+                    border-style: solid;
+                    border-radius: 0.2rem;
+                    border-color: black;
+                    border-width: 3px;
+                   }
+            .loginform{
+                      padding:25px;
+                      right:0%;                  
+                      width: 25%;
+                      margin-left: 900px;
+                      text-align: center;
+                      margin-top: 10px;
+                      border:8px solid #f9b208;
+                      border-radius: 2rem;
+                      }
+            .abc{
+                  position: absolute;
+                  top: 35px;
+                  left: 50px;
+                  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                  color: white;
+                  font-size: x-large;
+                }
+            .abcd{
+                  position: absolute;
+                  top: 70px;
+                  left: 1050px;
+                  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                  color: black;
+                  font-size: x-large;
+                }
+            .submitbutton{
+              background-color:rgba(179, 99, 233, 0.699);
+              border-radius: 2rem;
+              width:140px;
+              height: 40px;
+              border:3px solid #72147e;
+            }
+            .submitbutton:hover {
+              background-color: rgb(121, 223, 39);
+              }
+            a:link {
+                  color: green;
+                    }
+
+            a:visited {
+                  color: #f9b208;
+                    }
+            a:hover {
+                  color: rgb(255, 255, 255);
+                  }
+        </style>
+          
+      </head>
+      <body>
+          <div class="jumbotron jumbotron-fluid text-black" style="background-color: #72147e;">
+            <div class="container">
+              <div class='abc'><h1>College Fees Management System</h1></div>
+               <table class="abcd">
+                 <th>
+                    <a href="/FirstPage/"><h4>Home</h4></a></div>
+                 </th>
+               </table>
+            </div>
+        </div>
+
+       <div class='loginform'>
+          {% load static %}
+           <img class="mb-4" src="{%static 'IMAGES/images.jpg' %}" alt="" width="82" height="82">
+           <h1>Student Login</h1>
+           <h3>Please sign in</h3>
+           <br>
+           <form action="/STUDENTLogin/" method='post'>
+             
+            <input type="text" class='form-textbox' id="inputEmail" name='username' placeholder="USERNAME *"  size='30' width="8px" required>
+            <br>
+            <br>
+            <input type="password" class='form-textbox' id="inputPassword" name='password' placeholder="PASSWORD *" size="30" width="2px" required>
+            <br>
+            <br>
+            <button type="submit" class="submitbutton">Sign in</button>
+           </form>
+          </div>
+          <div>
+            {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                        {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+                        <script>alert("{{ message }}")</script>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+            
+          <div class="checkbox mb-3">
+       </div>
+       <hr>
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+       <div class="sticky-bottom jumbotron jumbotron-fluid text-white text-left"  style="background-color: #72147e;"></div>
+      
+      </body>
+    </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a{
+      color:rgb(10, 150, 126);
+     }
+    .text-block {
+      position: absolute;
+      top: 20px;
+      left: 40px;
+      color: black;
+      font-size: x-large;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .text-block1 {
+      position: absolute;
+      top: 100px;
+      left: 300px;
+      color: rgb(44, 156,207);
+      font-size: xx-large;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .text-block2 {
+      position: absolute;
+      font-family:Georgia, 'Times New Roman', Times, serif;
+      top: 300px;
+      left: 860px;
+      font-size: xx-large;
+      padding:10px;
+      
+    }
+    
+    </style>
+</head>
+<body>
+  
+<div class="container">
+  {% load static %}
+     <img  src="{%static 'IMAGES/MainWallpaper.jpg' %}" alt="Nature" style="width:100%;" >
+    <div class="text-block">
+      <h1>College Fees Management System</h1>
+    </div>
+    <div class="text-block1">
+        <h1>Welcome to College Portal</h1>
+    </div>
+    <table class="text-block2">
+      <tr>
+        <td><a href="/HodLogin/"> HOD LOGIN </a></td>
+      </tr>
+      <tr>   
+        <td><a href="/AdminLogin/">STAFF LOGIN </a></td>
+      </tr>
+      <tr>
+      <td><a href="/StudenttLogin/"> STUDENT LOGIN </a></td>
+        </tr>
+    </table>
+  </div>
+  
+</body>
+</html>
