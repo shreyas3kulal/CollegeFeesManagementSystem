@@ -273,7 +273,8 @@ def STUDENTLogin(request):
                 return redirect('/StudenttLogin/')
                 messages.info(request,'Invalid credentials')
             if user.is_authenticated and type_obj.is_student:
-                return redirect("/StudentMain/")
+                #return redirect("/StudentMain/")
+                return render(request,'studentmain.html',{'Data':user}) 
             else:
                 messages.info(request,'Invalid credentials')
                 return redirect('/StudenttLogin/')
@@ -323,7 +324,8 @@ def HODLogin(request):
                 messages.info(request,'Invalid credentials')
                 return redirect('/HodLogin/')
             if user.is_authenticated and type_obj.is_superuser:
-                return redirect("/HodMain/")
+               # return redirect("/HodMain/")
+                return render(request,'hodmain.html',{'Data':user}) 
             else:
                 messages.info(request,'Invalid credentials')
                 return redirect('/HodLogin/')
